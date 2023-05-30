@@ -1,0 +1,26 @@
+:root {
+    --blanco: #ffffff;
+    --negro: #212121;
+    --primario: #00BFFF;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    font-family:'Gill Sans MT';
+
+}
+
+.titulo_marca {
+    text-align: center;
+    font-size: 3.8rem;/*1 rem es igual a 10px*/
+}
+
+.titulo_marca span {
+    font-size: 1.6rem;
+    font-family: 'Poiret One', cursive;
+    color: var(--primario);
+}
