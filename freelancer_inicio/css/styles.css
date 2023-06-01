@@ -1,6 +1,6 @@
 :root {
     --blanco: #ffffff;
-    --negro: #212121;
+    --negro: black;
     --primario: #00BFFF;
 }
 
@@ -24,3 +24,28 @@ body {
     font-family: 'Poiret One', cursive;
     color: var(--primario);
 }
+
+.contenedor{/*Va a centrar todo el contenido de mi pagina web*/
+    width: 120rem;
+    margin: 0 auto;
+}
+
+.nav-baground{
+    /*La siguiente linea crea el fondo de la navegación principal*/
+    background-color: var(--negro); /*Se coloca aqui porque al usar la clase contenedor este llimita a que el contenedor lo limita*/
+}
+
+.navegacion-principal{
+    padding: 1rem;
+    display: flex;/*Esta propiedad ayuda a centrar los elementos a de html y para ellos se tiene que habilitar flexbox y esto se logra colocando esto en elemento padre de lo que 
+    que queremos centrar, en este caso como se quiere centrar los "a", se debe colocar en la clase de nav
+    */
+    justify-content: space-between;/*ayuda mover el contenido horizontalmente, y con space-between el contenido se distribuye*/
+    
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
