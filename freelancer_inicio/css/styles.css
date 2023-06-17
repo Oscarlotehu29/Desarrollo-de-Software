@@ -26,26 +26,65 @@ body {
 }
 
 .contenedor{/*Va a centrar todo el contenido de mi pagina web*/
-    width: 120rem;
+    max-width: 120rem;/*Esto se cambio de width a "max-width" para indicar que esto lo tome como maximo y solo cuando este espacio este disponible*/
     margin: 0 auto;
 }
 
 .nav-baground{
     /*La siguiente linea crea el fondo de la navegación principal*/
-    background-color: var(--negro); /*Se coloca aqui porque al usar la clase contenedor este llimita a que el contenedor lo limita*/
+    background-color: var(--negro); /*Se coloca aqui porque al usar la clase contenedor este limita a que el contenedor lo limita*/
 }
 
 .navegacion-principal{
-    padding: 1rem;
+    
     display: flex;/*Esta propiedad ayuda a centrar los elementos a de html y para ellos se tiene que habilitar flexbox y esto se logra colocando esto en elemento padre de lo que 
     que queremos centrar, en este caso como se quiere centrar los "a", se debe colocar en la clase de nav
-    */
-    justify-content: space-between;/*ayuda mover el contenido horizontalmente, y con space-between el contenido se distribuye*/
+    Sirve para alinear elementos en los diseños.
     
+    Direcciones: 
+    podemos distribuir elementos en las dos direciones, en horizontal(fila, es decir, de izquierda a derecha), y vertical (column) de arriba hacia abajo.
+
+    Si usamos display: flex; o display-direction:row; -- es lo mismo, los elementos hijos se ponen uno frente a otro es como un display inline se coloca uno a la derecha de otro
+    y viene consigo la propiedad de "justify-content".
+
+    display-direction: column lo vuelve como si fuera un display block se colocan los elementos de arriba hacia abajo
+    las propiedades para alinear este contenido en este eje, tenemos que usar la propiedad de align-items.
+    */
+    flex-direction: column;
+    /*align-items: center;*/
+    /*justify-content: space-between;ayuda mover el contenido horizontalmente, y con space-between el contenido se distribuye*/
+    
+    /*Si querremos distribuir el contenido:display:
+        podemos usar las propiedades que comienzan con "space"
+        space-between: Le dice al primer y ultimo contenido que se vayan a las esquinas y a partir de ello distribuye el espacio entre cada elemento
+        space-around: Distribuye los elementos, entre cada elemento es el mismo espacio de separación
+    */
 }
 
 .navegacion-principal a {
+    padding: 1rem;/*Lo interpreta como un pading en las cuatro direcciones al igual que el margin*/
     color: var(--blanco);
-    text-decoration: none;
+    text-decoration: none;/*Quitamos el subrayado del texto*/
+    font-size: 1.8rem;
+    font-weight: 700;/*Coloca texto en negritas porque los textos, enlaces y parrafos tienen de tamaño por defecto de 400px o normal, 700px es lo mismo que bold*/
+    display: block;
+    text-align: center;
 }
 
+.navegacion-principal a:hover {/*Es un evento de css y son conocidos como pseudoclases, es decir, clases que se crean en el momento hover es el efecto que se dispara al poner el cursor sobre el enlace*/
+    background-color: var(--primario);
+}
+
+/*Media Queris
+mobiles: 0 - 480px
+Tablets: 768px -- para las tablets
+*/
+
+@media (min-width: 768px) {
+    .navegacion-principal{/*Lo que tenga en el contenido principal se hereda a los mediaqueries, por lo tanto no se tiene que volver a activar el display "flex"*/
+        flex-direction: row;/*Lo que hacemos es que llegado al tamaño de una tablet (768px) en adelante regresamos la direccion del display flex al eje de izquierda a derecha*/
+        justify-content: space-between;
+    }
+}/*llegado el numero especificado hacia arriba, se aplicara todo lo que este dentro
+-Todo lo que se encuentre afuera de los mediaquerie se va a aplicar a partir de cero
+*/
