@@ -6,6 +6,11 @@
 
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
 }
 
 body {
@@ -88,3 +93,9 @@ Tablets: 768px -- para las tablets
 }/*llegado el numero especificado hacia arriba, se aplicara todo lo que este dentro
 -Todo lo que se encuentre afuera de los mediaquerie se va a aplicar a partir de cero
 */
+
+.hero{
+    background-image: url(../img/m55.jpg);
+    background-repeat: no-repeat;/*Para que la imagen que esta de fondo no se repita*/
+    background-size: cover;
+}
