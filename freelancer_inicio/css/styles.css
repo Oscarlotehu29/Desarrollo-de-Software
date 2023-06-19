@@ -6,11 +6,11 @@
 
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box;/*Esto*/
 }
 
 *, *:before, *:after{
-    box-sizing: inherit;
+    box-sizing: inherit; /*-- y esto sirven para poder respetar el tamaño de los elementos si aplicamos un padding por ejemplo*/
 }
 
 body {
@@ -19,7 +19,7 @@ body {
 
 }
 
-.titulo_marca {
+.titulo_marca, .subtitulo {
     text-align: center;
     font-size: 3.8rem;/*1 rem es igual a 10px*/
 }
@@ -98,4 +98,11 @@ Tablets: 768px -- para las tablets
     background-image: url(../img/m55.jpg);
     background-repeat: no-repeat;/*Para que la imagen que esta de fondo no se repita*/
     background-size: cover;
+    height: 450px;
+    padding: 20px;
+    position: relative;
+}
+
+.contenido-hero{
+    position: absolute;
 }
