@@ -99,10 +99,33 @@ Tablets: 768px -- para las tablets
     background-repeat: no-repeat;/*Para que la imagen que esta de fondo no se repita*/
     background-size: cover;
     height: 450px;
-    padding: 20px;
-    position: relative;
+    position: relative;/**/
 }
 
 .contenido-hero{
-    position: absolute;
+    position: absolute;/*Cuando se quiere posicionar el contenido en un lugar exacto se usa posicion absoluta y relativa
+    y para que la clase hija se pueda mover, se tiene que definir como posicion absoluta, y la clase padre
+    se coloca como posicion relative, en este caso la clase padre es la clase ".hero".
+    */
+
+    /*
+    width: 2rem;
+    height: 2rem;
+    background-color: red;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    */
+
+    /* Coordenadas:
+    posicion "top" --- es la parte de arriba
+    bottom: abajo
+    */
+
+    background-color: rgb(0, 0, 0, .5);/*Esta linea aplica la transparencia a la imagen, el cuarto valor es el que modifica la intensidad de la transparencia con valores de 0 a 1 o con porcentajes*/
+    background-color: rgb(0 0 0 / 60%);
+    width: 100%;
+    height: 100%;/*Es para que ocupe todo el espacio disponible desde donde la clase "hero" se lo permita*/
+
 }
