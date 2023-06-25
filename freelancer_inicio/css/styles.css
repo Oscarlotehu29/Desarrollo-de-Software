@@ -3,41 +3,19 @@
     --negro: black;
     --primario: #00BFFF;
 }
-
+ /*Globales*/
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;/*Esto*/
+    font-size: 62.5%;/*-Hack1*/
+    box-sizing: border-box;/*-- Hack2 - Esto*/
 }
 
 *, *:before, *:after{
-    box-sizing: inherit; /*-- y esto sirven para poder respetar el tamaño de los elementos si aplicamos un padding por ejemplo*/
+    box-sizing: inherit; /*-- Hack2 - y esto sirven para poder respetar el tamaño de los elementos si aplicamos un padding por ejemplo*/
 }
 
 body {
-    font-size: 16px;
+    font-size: 16px;/*-Hack1 -- esta linea y la de arriba que tiene el mismo nombre como comentario es el hack para que los rem se manipulen de mejor manera en el html*/
     font-family:'Gill Sans MT';
-}
-
-h1  {
-    font-size: 3.8rem;/*1 rem es igual a 10px*/
-}
-
-h2  {
-    font-size: 2.8rem;
-}
-
-h3  {
-    font-size: 1.8rem;
-}
-
-h1, h2, h3 {
-    text-align: center;
-}
-
-.titulo_marca span {
-    font-size: 1.6rem;
-    font-family: 'Poiret One', cursive;
-    color: var(--primario);
 }
 
 .contenedor{/*Va a centrar todo el contenido de mi pagina web*/
@@ -65,6 +43,31 @@ h1, h2, h3 {
     }
 }
 
+/*Tipografia a los headings*/
+h1  {
+    font-size: 3.8rem;/*1 rem es igual a 10px*/
+}
+
+h2  {
+    font-size: 2.8rem;
+}
+
+h3  {
+    font-size: 1.8rem;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+/*Titulos*/
+.titulo_marca span {
+    font-size: 1.6rem;
+    font-family: 'Poiret One', cursive;
+    color: var(--primario);
+}
+
+/*Navegacion principal*/
 .nav-baground{
     /*La siguiente linea crea el fondo de la navegación principal*/
     background-color: var(--negro); /*Se coloca aqui porque al usar la clase contenedor este limita a que el contenedor lo limita*/
@@ -124,6 +127,7 @@ Tablets: 768px -- para las tablets
 -Todo lo que se encuentre afuera de los mediaquerie se va a aplicar a partir de cero
 */
 
+/*Hero*/
 .hero{
     background-image: url(../img/m55.jpg);
     background-repeat: no-repeat;/*Para que la imagen que esta de fondo no se repita*/
