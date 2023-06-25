@@ -45,6 +45,26 @@ h1, h2, h3 {
     margin: 0 auto;
 }
 
+.boton  {
+    background-color: var(--negro);/*color de fondo del boton*/
+    color: var(--blanco);/*Color de texto*/
+    padding: 1rem 3rem;
+    margin-top: 3.5rem;/*Para colocar separacion entre el elemento de arriba (el icono y el texto) y el boton*/
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;/*Tranforma el texto a mayusculas, Se recomienda colocar aquí los cambios a mayuscula o minuscaula para el texto ya que permite hacer un solo cambio en todo el documento html a diferencia de que si en el html lo quisieramos en dicho documento seria un cambio por texto*/
+    font-weight: bold; /*Hacemos el texto más en negrita*/
+    border-radius: .5rem; /*Le da el estilo redondeado al boton*/
+    width: 90%; /*Aumentamos el tamaño del boton para el diseño responsivo*/
+    text-align: center; /*Alineamos el texto del boton*/
+}
+
+@media (min-width: 768px) { /*Llegado a este numero de pixeles el tamaño del boton se resetea es decir vuelve a su tamaño normal*/
+    .boton  {
+        width: auto;
+    }
+}
+
 .nav-baground{
     /*La siguiente linea crea el fondo de la navegación principal*/
     background-color: var(--negro); /*Se coloca aqui porque al usar la clase contenedor este limita a que el contenedor lo limita*/
@@ -150,5 +170,5 @@ Tablets: 768px -- para las tablets
 
 .ubicacion  {
     display: flex;
-    align-items: end;
+    align-items: end;/*Alinea verticalmente hacia abajo el texto de la clase*/
 }
